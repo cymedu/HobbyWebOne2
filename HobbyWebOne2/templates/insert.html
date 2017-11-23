@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传物品</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" >
+    <p><label for="id_headImg">物品图片:</label>
+        <input type="file" name="headImg" required id="id_headImg" /></p>
+    <p><label for="id_thinghobby">爱好:</label>
+        <input type="text" name="thinghobby" required id="id_thinghobby" /></p>
+    <p><label for="id_thingtype">物品类别:</label>
+        <input type="text" name="thingtype" required id="id_thingtype" /></p>
+    <p><label for="id_brand">物品品牌:</label>
+        <input type="text" name="brand" required id="id_brand" /></p>
+    <p><label for="id_realname">具体名称:</label>
+        <input type="text" name="realname" required id="id_realname" /></p>
+    <p><label for="id_paymoney">押金:</label>
+        <input type="text" name="paymoney" required id="id_paymoney" /></p>
+    <p><label for="id_needmoney">租金:</label>
+        <input type="text" name="needmoney" required id="id_needmoney" /></p>
+    <input type="submit" id='upload' value="提交"/>
+    </form>
+</body>
+</html>

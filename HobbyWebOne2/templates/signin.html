@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sign In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Motel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+<script src="/static/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap.js"></script>
+</head>
+<body>
+<!-- banner -->
+	<div class="banner1">
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h1><a href="../index">易物共享</a></h1>
+				</div>
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!--/.navbar-header-->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="../index">首页</a></li>
+								<li><a href="../aboutus">关于我们</a></li>
+								<li><a href="../offers">物品</a></li>
+								<li class="active"><a href="../signin">登录</a></li>
+								<li><a href="../contact">联系我们</a></li>
+							</ul>
+						</div>
+						<!--/.navbar-collapse-->
+					</nav>
+				<div class="search-box">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="输入查询物品名称" type="search" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"> </span>
+							</form>
+					</div>
+				</div>
+					<div class="clearfix"> </div>
+
+				<!-- search-scripts -->
+					<script src="/static/classie.js"></script>
+					<script src="/static/uisearch.js"></script>
+					<script>
+						new UISearch( document.getElementById( 'sb-search' ) );
+					</script>
+				<!-- //search-scripts -->
+
+			</div>
+		</div>
+	</div>		
+<!-- banner -->
+
+<div class="login-page">
+		<div class="container">
+			<div class="account_grid">
+				<div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+					<h3>新用户注册</h3>
+					<p>通过在我们的共享平台创建一个账户，你可以登录账户并使用我们的平台，共享使用平台内的已登记物品</p>
+					<a class="acount-btn" href="../register">创建账户</a>
+			   </div>
+			   <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
+					<h3>用户登录</h3>
+						<div>
+							<span>用户名<label>*</label></span>
+							<input type="text" name="signin_name" required id="name_id">
+						</div>
+						<div>
+							<span>密码<label>*</label></span>
+							<input type="password" name="signin_password" required id="password_id">
+						</div>
+						<a class="forgot" href="#">忘记密码?</a>
+						<input type="submit" value="登录" required id="login_button">
+				   <!-- login-scripts -->
+					<script src="/static/jquery.js"></script>
+					<script type="text/javascript">
+						$(document).ready(function () {
+                            console.log("123");
+                            $("#login_button").click(function (event) {
+                                console.log("abc");
+                                event.preventDefault();
+                                var username=$("#name_id");//将文本框转化文jquery对象
+                                var password=$("#password_id");
+                                $.ajax({
+                                    type: "post",//使用post方法访问后台
+                                    dataType: "json",//返回json格式的数据
+                                    data: {"username": username.val(),"password":password.val()},
+                                    complete: function () {
+                                        $("#load").hide();
+                                    },//AJAX请求完成时隐藏loading提示
+                                    success: function (data) {
+                                    	console.log(data);
+                                    	if(data[0].username=="weizhuceyhm"&&data[0].password=="")
+                                    		alert("未注册该用户名");
+										else if(data[0].username=="yhmmimabuzhengque"&&data[0].password=="")
+											alert("密码不正确");
+										else
+											alert("成功登录");
+                                    }
+                                });
+                            });
+                        });
+					</script>
+					<!-- //login-scripts -->
+			   </div>	
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- footer -->
+	<div class="footer-bottom">
+			<div class="container">
+				<p>易物共享平台欢迎使用</p>
+			</div>
+		</div>
+<!-- footer -->
+</body>
+</html>

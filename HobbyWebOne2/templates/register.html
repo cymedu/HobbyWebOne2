@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Motel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+<script src="/static/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap.js"></script>
+</head>
+<body>
+<!-- banner -->
+	<div class="banner1">
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h1><a href="../index">易物共享</a></h1>
+				</div>
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!--/.navbar-header-->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="../index">首页</a></li>
+								<li><a href="../aboutus">关于我们</a></li>
+								<li><a href="../offers">物品</a></li>
+								<li class="active"><a href="../signin">登录</a></li>
+								<li><a href="../contact">联系我们</a></li>
+							</ul>
+						</div>
+						<!--/.navbar-collapse-->
+					</nav>
+				<div class="search-box">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="输入查询物品名称" type="search" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"> </span>
+						</form>
+					</div>
+				</div>
+					<div class="clearfix"> </div>
+
+				<!-- search-scripts -->
+					<script src="/static/classie.js"></script>
+					<script src="/static/uisearch.js"></script>
+					<script>
+						new UISearch( document.getElementById( 'sb-search' ) );
+					</script>
+				<!-- //search-scripts -->
+
+			</div>
+		</div>
+	</div>		
+<!-- banner -->
+<!-- registration -->
+	<div class="main-1">
+		<div class="container">
+			<div class="register">    
+				<div class="clearfix"> </div>
+				<div class="register-but">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="register-top-grid">
+						<h3>个人信息</h3>
+						<div class="wow fadeInRight" data-wow-delay="0.4s">
+							<span>用户名<label>*</label></span>
+							<input type="text" name="register_name" required id="id_name">
+						</div>
+						<div class="section_1" data-wow-delay="0.4s">
+							<span>兴趣爱好<label>*</label></span>
+							<select name="register_hobby" id="hobby_section" onChange="change_country(this.value)" class="frm-field required">
+								<option value="null">选择你的爱好</option>
+								<option value="摄影">摄影</option>
+                                <option value="垂钓">垂钓</option>
+								<option value="科技">科技</option>
+								<option value="游戏">游戏</option>
+								<option value="运动">运动</option>
+								<option value="驾驶">驾驶</option>
+								<option value="其他">其它</option>
+							</select>
+						</div>
+						<div class="section_1" data-wow-delay="0.4s">
+							<span>工作<label>*</label></span>
+							<select name="register_job" id="job_section" onChange="change_country(this.value)" class="frm-field required">
+								<option value="null">选择你的职业</option>
+								<option value="公务员">公务员</option>
+                                <option value="律师">律师</option>
+								<option value="会计">会计</option>
+								<option value="互联网">程序员</option>
+								<option value="教师">教师</option>
+								<option value="其他白领">其它白领</option>
+								<option value="蓝领">蓝领</option>
+								<option value="管理者">管理者</option>
+								<option value="学生">学生</option>
+							</select>
+						</div>
+						<div class="section_1" data-wow-delay="0.4s">
+							<span>家庭状况<label>*</label></span>
+							<select name="register_family" id="family_section" onChange="change_country(this.value)" class="frm-field required">
+								<option value="null">选择你的家庭状况</option>
+								<option value="单身">单身</option>
+                                <option value="恋爱中">恋爱中</option>
+								<option value="已婚">已婚</option>
+							</select>
+						</div>
+						<div class="wow fadeInRight" data-wow-delay="0.4s">
+							<span>年龄<label>*</label></span>
+							<input min="9" type="number" id="id_age" name="register_age" value="9" class="form-control input-small">
+					 	</div>
+					 </div>
+					 <div class="register-bottom-grid">
+						 <div class="wow fadeInLeft" data-wow-delay="0.4s">
+							<span>密码<label>*</label></span>
+							<input type="password" name="register_password">
+						 </div>
+						 <div class="wow fadeInRight" data-wow-delay="0.4s">
+							<span>确认密码<label>*</label></span>
+							<input type="password" name="register_rpassword">
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+					<input type="submit" value="提交">
+					<div class="clearfix"> </div>
+                </form>
+				</div>
+		   </div>
+		 </div>
+	</div>
+<!-- registration -->
+<!-- footer -->
+	<div class="footer-bottom">
+			<div class="container">
+				<p>易物共享平台欢迎使用</p>
+			</div>
+		</div>
+<!-- footer -->
+</body>
+</html>
